@@ -10,10 +10,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', async (req, res, next) => {
-    res.send("Welcome to online store APIs")
+    res.send("Welcome to online shopping store APIs")
 })
 
 app.use('/user', require('./routes/User'));
+app.use('/item', require('./routes/Item'));
 
 // start server
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
