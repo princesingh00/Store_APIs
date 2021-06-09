@@ -7,3 +7,7 @@ const connectionOptions = {
 };
 mongoose.connect(process.env.MONGODB_URI, connectionOptions);
 mongoose.Promise = global.Promise;
+
+module.exports = {
+    User: require('../models/User'),
+}
