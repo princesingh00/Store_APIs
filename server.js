@@ -15,6 +15,8 @@ app.get('/', async (req, res, next) => {
 
 app.use('/user', require('./routes/User'));
 app.use('/item', require('./routes/Item'));
+app.use('/cart', require('./routes/Cart'));
+app.use('/order', require('./routes/Item'));
 
 // start server
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
