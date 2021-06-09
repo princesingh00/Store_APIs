@@ -10,12 +10,11 @@ router.get('/list', allUsers);
 module.exports = router;
 
 function signup(req, res, next) {
-    console.log(req.body);
     user.signup(req.body)
         .then(user => user ?
             res.json(user) :
             res.status(400).json({
-                message: "user created successfully"
+                message: "something went wrong"
             }))
         .catch(err => next(err));
 }
