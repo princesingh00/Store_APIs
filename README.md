@@ -46,20 +46,20 @@ Online-Shopping-Store
 
 - Base Url <https://online-shoppers-store.herokuapp.com>
 
-| Endpoints                     | Description           |
-| ------------------------------| --------------------- |
-| /user/create                  | create user           |
-| /user/login                   | user login            |
-| /user/list                    | get all users         |
-| /cart/add/:userId/:itemId     | add item in cart      |
-| /cart/:cartId/complete/:userId| convert cart to order |
-| /cart/list/:userId            | cart by user          |
-| /cart/list                    | get all carts         |
-| /order/create/:userId/:cartId | create order          |
-| /order/list/:userId           | get orders by user    |
-| /order/list                   | get all orders        |
-| /item/create                  | add item              |
-| /item/list                    | get all items         |
+| Endpoints                           | Description              |
+|     :-------------------------:     |    :---------------:     |
+| /user/create                        | create user              |
+| /user/login                         | user login               |
+| /user/list                          | get all users            |
+| /cart/add/:userId/:itemId           | add item in cart         |
+| /cart/:cartId/complete/:userId      | convert cart to order    |
+| /cart/list/:userId                  | cart by user             |
+| /cart/list                          | get all carts            |
+| /order/create/:userId/:cartId       | create order             |
+| /order/list/:userId                 | get orders by user       |
+| /order/list                         | get all orders           |
+| /item/create                        | add item                 |
+| /item/list                          | get all items            |
 
 
 ## Author
