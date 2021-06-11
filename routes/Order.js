@@ -14,36 +14,38 @@ function createOrder(req, res, next) {
         .then(order => order ?
             res.status(200).json({
                 order: order,
-                message: "ordered succesfully"
+                message: "Your Order Placed Succesfully"
             }) :
             res.status(400).json({
-                message: "something went wrong"
+                message: "Something Went Wrong, try again"
             }))
         .catch(err => next(err));
 }
+
 
 function getOrdersByUser(req, res, next) {
     order.getOrdersByUser(req.params)
         .then(order => order ?
             res.status(200).json({
                 order: order,
-                message: "fetched orders succesfully"
+                message: "Fetched Orders Succesfully"
             }) :
             res.status(400).json({
-                message: "something went wrong"
+                message: "Orders Not Found"
             }))
         .catch(err => next(err));
 }
+
 
 function getAllOrders(req, res, next) {
     order.getAllOrders()
         .then(order => order ?
             res.status(200).json({
                 order: order,
-                message: "fetched all orders succesfully"
+                message: "Fetched All Orders Succesfully"
             }) :
             res.status(400).json({
-                message: "something went wrong"
+                message: "Orders Not Found"
             }))
         .catch(err => next(err));
 }

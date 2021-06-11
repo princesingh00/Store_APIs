@@ -5,6 +5,7 @@ module.exports = {
     allItems
 };
 
+
 async function addItem(item) {
     /* validating is item with name already present or not*/
     if (await Item.findOne({ name: item.name }))
@@ -12,6 +13,7 @@ async function addItem(item) {
 
     return await new Item(item).save();
 }
+
 
 async function allItems() {
     return await Item.find();

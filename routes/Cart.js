@@ -15,23 +15,24 @@ function addItemInCart(req, res, next) {
         .then(cart => cart ?
             res.status(200).json({
                 cart: cart,
-                message: "item added succesfully"
+                message: "Item Added to Cart Succesfully"
             }) :
             res.status(400).json({
-                message: "something went wrong"
+                message: "Something Went Wrong"
             }))
         .catch(err => next(err));
 }
+
 
 function convertCartToOrder(req, res, next) {
     cart.convertCartToOrder(req.params)
         .then(cart => cart ?
             res.status(200).json({
                 cart: cart,
-                message: "order placed succesfully"
+                message: "Your Order Placed Succesfully"
             }) :
             res.status(400).json({
-                message: "something went wrong"
+                message: "Something Went Wrong"
             }))
         .catch(err => next(err));
 }
@@ -39,13 +40,10 @@ function convertCartToOrder(req, res, next) {
 
 function getCartByUser(req, res, next) {
     cart.getCartByUser(req.params.userId)
-        .then(cart => cart ?
+        .then(cart =>
             res.status(200).json({
                 cart: cart,
-                message: "fetched cart successfully"
-            }) :
-            res.status(400).json({
-                message: "something went wrong"
+                message: "Fetched Cart Successfully"
             }))
         .catch(err => next(err));
 }
@@ -55,10 +53,10 @@ function getAllCarts(req, res, next) {
         .then(cart => cart ?
             res.status(200).json({
                 cart: cart,
-                message: "fetched all carts successfully"
+                message: "Fetched all Carts Successfully"
             }) :
             res.status(400).json({
-                message: "something went wrong"
+                message: "Something Went Wrong"
             }))
         .catch(err => next(err));
 }

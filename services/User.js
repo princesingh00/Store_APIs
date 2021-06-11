@@ -21,6 +21,7 @@ async function signup(userParam) {
     return await user.save();
 }
 
+
 async function authenticate({ username, password }) {
     const user = await User.findOne({ username });
 

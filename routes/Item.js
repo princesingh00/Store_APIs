@@ -11,19 +11,23 @@ module.exports = router;
 function addItem(req, res, next) {
     item.addItem(req.body)
         .then(item => item ?
-            res.json(item) :
+            res.status(201).json({
+                item: item,
+                message: "Item Added Successfully"
+            }) :
             res.status(400).json({
-                message: "something went wrong"
+                message: "Something Went Wrong"
             }))
         .catch(err => next(err));
 }
 
+
 function getAllItems(req, res, next) {
     item.allItems(req.body)
-        .then(items => items ?
-            res.json(items) :
-            res.status(400).json({
-                message: "items not found"
+        .then(items =>
+            res.status(200).json({
+                items: items,
+                message: "Items Fetched Successfully"
             }))
         .catch(err => next(err));
 }
