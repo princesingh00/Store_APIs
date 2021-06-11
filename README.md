@@ -47,7 +47,7 @@ Online-Shopping-Store
 - Base Url <https://online-shoppers-store.herokuapp.com>
 
 | Endpoints                           | Description              |
-|     :-------------------------:     |    :---------------:     |
+| ----------------------------------- | ------------------------ |
 | /user/create                        | create user              |
 | /user/login                         | user login               |
 | /user/list                          | get all users            |
